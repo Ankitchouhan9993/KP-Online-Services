@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            margin-bottom: 0;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .full-screen-section {
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .login-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+        .login-title {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+        }
+        .footer {
+            background-color: #f8f9fa;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+        .footer a {
+            margin: 0 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">KPS Print Service</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="full-screen-section">
+        <div class="login-container">
+            <div class="login-title text-center">WELCOME TO KPS PRINT SERVICE</div>
+            <p>Welcome to KPS Print Service, your one-stop solution for all your printing needs. Whether you are an individual or a business, we provide high-quality printing services tailored to your requirements. Our advanced technology and dedicated team ensure that you receive the best results every time. Thank you for choosing us!</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="full-screen-section">
+        <div class="login-container">
+            <div class="login-title text-center">About KPS Print Service</div>
+            <p>KPS Print Service offers a wide range of printing solutions, including document printing, PAN card services, vehicle RC services, and more. Our mission is to provide efficient and reliable services to our customers. We use state-of-the-art technology to ensure the highest quality and customer satisfaction. Our user-friendly platform makes it easy for you to manage all your printing needs in one place.</p>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="full-screen-section">
+        <div class="login-container">
+            <div class="login-title text-center">Login</div>
+            <form>
+                <div class="mb-3">
+                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                    <input type="text" class="form-control" id="phoneNumber" placeholder="Enter phone number">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password">
+                </div>
+                <div class="mb-3">
+                    <label for="userType" class="form-label">Login as:</label>
+                    <select class="form-select" id="userType">
+                        <option value="admin">Admin</option>
+                        <option value="retailer">Retailer</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-custom w-100"><a href="./Dashboard.html">Login</a></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Connect with us:</p>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://t.me/kps_support" target="_blank">Support</a>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
